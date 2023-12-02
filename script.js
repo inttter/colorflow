@@ -1,11 +1,11 @@
 const gradientBox = document.getElementById('gradientBox');
 const gradientInput = document.getElementById('gradientInput');
 
-// Function to update gradient box based on user input
+// Updates gradient box based on user input
 function updateGradientBox() {
   const userInput = gradientInput.value.trim();
 
-  // Check if the entered value is a valid gradient or RGB color or hexadecimal color code
+  // Checks if the entered value is a valid gradient or RGB color or hexadecimal color code
   if (isValidGradient(userInput)) {
     gradientBox.style.background = userInput;
   } else if (isValidRGB(userInput)) {
@@ -34,22 +34,20 @@ gradientBox.addEventListener('click', (e) => {
 });
 
 function getColorAtPosition(x, y) {
-  // Function to get color
-  // ...
 }
 
 function isValidGradient(value) {
-  // Function to check if the entered value is a valid gradient syntax
+  // Checks if the entered value is a valid gradient syntax/color
   return /^linear-gradient\(.+\)$/i.test(value);
 }
 
 function isValidRGB(value) {
-  // Function to check if the entered value is a valid RGB color
+  // Checks if the entered value is a valid RGB color
   return /^rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\)$/i.test(value);
 }
 
 function isValidHexColor(value) {
-  // Function to check if the entered value is a valid hexadecimal color code
+  // Checks if the entered value is a valid hexadecimal color code
   return /^#([0-9A-F]{3}){1,2}$/i.test(value);
 }
 
@@ -85,25 +83,25 @@ function getRandomColor() {
 // Function to generate a random gradient with 2 or 3 colors
 function generateRandomGradient() {
   let gradient = 'linear-gradient(to right, ';
-  const numColors = Math.floor(Math.random() * 2) + 2; // Generate 2 or 3 colors for the gradient
+  const numColors = Math.floor(Math.random() * 2) + 2; // 2-3 colors //
   let gradientValue = '';
 
   for (let i = 0; i < numColors; i++) {
     const color = getRandomColor();
     gradientValue += color;
     gradient += color;
-    gradient += i === numColors - 1 ? ')' : ', '; // Add comma if not the last color
+    gradient += i === numColors - 1 ? ')' : ', ';
   }
 
-  // Apply the generated gradient to the background
+  // Applies the generated gradient to the background
   const gradientBox = document.getElementById('gradientBox');
   gradientBox.style.background = gradient;
 
-    // Display the generated gradient or RGB value in the input box
+    // Display the generated gradient or RGB or HEX value in the input box
     const gradientInput = document.getElementById('gradientInput');
     gradientInput.value = gradientValue;
   
-    // Redirect to the preview page with the generated gradient value
+    // Redirects to preview page
     const encodedValue = encodeURIComponent(gradient);
     window.open(`preview.html?gradient=${encodedValue}`, '_blank');
   }
@@ -121,11 +119,9 @@ function generateRandomGradient() {
       gradientInput.setSelectionRange(0, 99999); // For mobile devices //
   
       try {
-        // Copy the selected text to the clipboard
         document.execCommand('copy');
         console.log('Text copied to clipboard:', gradientInput.value);
   
-        // Change tooltip text to "Copied!" temporarily
         const tooltip = copyButton.querySelector('.tooltip');
         tooltip.innerText = tooltip.getAttribute('data-text-end');
         setTimeout(() => {
@@ -139,16 +135,14 @@ function generateRandomGradient() {
 
   document.addEventListener("DOMContentLoaded", function() {
     const loader = document.getElementById("loader");
-    const content = document.querySelector(".container"); // Adjust this to your container with elements to show
+    const content = document.querySelector(".container");
   
-    // Function to reveal content and hide loader
     function revealContent() {
       loader.style.display = "none";
-      document.body.classList.add('loaded'); // Add the 'loaded' class to body
+      document.body.classList.add('loaded');
     }
   
-    // Show loader for 1.5 seconds and then reveal content
-    setTimeout(revealContent, 1500); // Show loader for 1.5 seconds (1500 milliseconds)
+    setTimeout(revealContent, 1500); // 1.5 seconds fyi
   });
 
   const darkModeToggle = document.getElementById('darkModeToggle');
