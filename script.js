@@ -110,3 +110,29 @@ function generateRandomGradient() {
   
   // Add event listener to the button
   document.getElementById('randomGradientBtn').addEventListener('click', generateRandomGradient);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.querySelector('.copy');
+    const gradientInput = document.getElementById('gradientInput');
+  
+    copyButton.addEventListener('click', () => {
+      // Select the text in the input field
+      gradientInput.select();
+      gradientInput.setSelectionRange(0, 99999); // For mobile devices //
+  
+      try {
+        // Copy the selected text to the clipboard
+        document.execCommand('copy');
+        console.log('Text copied to clipboard:', gradientInput.value);
+  
+        // Change tooltip text to "Copied!" temporarily
+        const tooltip = copyButton.querySelector('.tooltip');
+        tooltip.innerText = tooltip.getAttribute('data-text-end');
+        setTimeout(() => {
+          tooltip.innerText = tooltip.getAttribute('data-text-initial');
+        }, 300000); // high time to prevent tooltip text from duplicating, nobody is spending more than 5 minutes on this website, lets be honest. 
+      } catch (err) {
+        console.error('Failed to copy text to clipboard:', err);
+      }
+    });
+  });
