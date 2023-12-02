@@ -57,7 +57,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 70px;
+    margin-right: 50px;
   }
 
   #previewLink {
