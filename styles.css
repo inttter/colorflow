@@ -304,3 +304,77 @@ body {
   0% { opacity: 0 }
   100% { opacity: 1}
 }
+
+.dark-mode {
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dark-mode button {
+color: fff;
+}
+
+.dark-mode .input {
+color: rgb(61, 56, 56);
+opacity: 0.8;
+}
+
+.dark-mode .input:hover {
+opacity: 1.0;
+}
+
+.dark-mode .input::placeholder {
+color: #d5d5d5;
+}
+
+.dark-mode h1 {
+color: #ffffff;
+}
+
+.dark-mode .tooltip-btn {
+color: rgb(61, 56, 56);
+}
+
+#darkModeToggle {
+position: absolute;
+top: 30px;
+right: 15px;
+font-size: 24px;
+}   .dark-mode {
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dark-mode button {
+color: fff;
+}
+
+.dark-mode .input {
+color: rgb(61, 56, 56);
+opacity: 0.8;
+}
+
+.dark-mode .input:hover {
+opacity: 1.0;
+}
+
+.dark-mode .input::placeholder {
+color: #d5d5d5;
+}
+
+.dark-mode h1 {
+color: #ffffff;
+}
+
+.dark-mode .tooltip-btn {
+color: rgb(61, 56, 56);
+}
+
+#darkModeToggle {
+position: absolute;
+top: 30px;
+right: 15px;
+font-size: 24px;
+}

@@ -150,3 +150,24 @@ function generateRandomGradient() {
     // Show loader for 1.5 seconds and then reveal content
     setTimeout(revealContent, 1500); // Show loader for 1.5 seconds (1500 milliseconds)
   });
+
+  const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', function() {
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode);
+});
+
+function loadDarkModePreference() {
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  if (isDarkMode) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+}
+
+// Call the function to load the user's dark mode preference on page load
+loadDarkModePreference();
