@@ -34,7 +34,7 @@ gradientBox.addEventListener('click', (e) => {
 });
 
 function getColorAtPosition(x, y) {
-  // Function to get color remains the same as previous implementations
+  // Function to get color
   // ...
 }
 
@@ -65,3 +65,48 @@ function updatePreviewLink() {
   const encodedValue = encodeURIComponent(userInput);
   previewLink.href = `preview.html?gradient=${encodedValue}`;
 }
+
+// Function to generate a random RGB color
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+}
+
+// Function to generate a random RGB color
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+}
+
+// Function to generate a random gradient with 2 or 3 colors
+function generateRandomGradient() {
+  let gradient = 'linear-gradient(to right, ';
+  const numColors = Math.floor(Math.random() * 2) + 2; // Generate 2 or 3 colors for the gradient
+  let gradientValue = '';
+
+  for (let i = 0; i < numColors; i++) {
+    const color = getRandomColor();
+    gradientValue += color;
+    gradient += color;
+    gradient += i === numColors - 1 ? ')' : ', '; // Add comma if not the last color
+  }
+
+  // Apply the generated gradient to the background
+  const gradientBox = document.getElementById('gradientBox');
+  gradientBox.style.background = gradient;
+
+    // Display the generated gradient or RGB value in the input box
+    const gradientInput = document.getElementById('gradientInput');
+    gradientInput.value = gradientValue;
+  
+    // Redirect to the preview page with the generated gradient value
+    const encodedValue = encodeURIComponent(gradient);
+    window.open(`preview.html?gradient=${encodedValue}`, '_blank');
+  }
+  
+  // Add event listener to the button
+  document.getElementById('randomGradientBtn').addEventListener('click', generateRandomGradient);
