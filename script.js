@@ -136,3 +136,17 @@ function generateRandomGradient() {
       }
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById("loader");
+    const content = document.querySelector(".container"); // Adjust this to your container with elements to show
+  
+    // Function to reveal content and hide loader
+    function revealContent() {
+      loader.style.display = "none";
+      document.body.classList.add('loaded'); // Add the 'loaded' class to body
+    }
+  
+    // Show loader for 1.5 seconds and then reveal content
+    setTimeout(revealContent, 1500); // Show loader for 1.5 seconds (1500 milliseconds)
+  });
