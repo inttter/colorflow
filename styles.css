@@ -97,12 +97,13 @@ body {
    }
 
    #randomGradientBtn {
+    font-family: 'Poppins', sans-serif;
     align-items: center;
     display: flex;
     justify-content: center;
     background: rgba(136, 149, 238, 0.467);
     color: white;
-    padding: 14px;
+    padding: 10px;
     border-radius: 20px;
     border: none;
     margin-top: 10px;
