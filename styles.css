@@ -267,7 +267,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
   z-index: 1000;
 }
 
@@ -277,7 +277,7 @@ body {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 2s linear, fadeOut 1.2s ease-out forwards;
+  animation: spin 3s linear, fadeOut 3s ease-out forwards;
 }
 
 @keyframes fadeOut {
@@ -301,47 +301,11 @@ body {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0 }
-  100% { opacity: 1}
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .dark-mode {
-  background-color: #000000;
-  color: #fff;
-  cursor: pointer;
-}
-
-.dark-mode button {
-color: fff;
-}
-
-.dark-mode .input {
-color: rgb(61, 56, 56);
-opacity: 0.8;
-}
-
-.dark-mode .input:hover {
-opacity: 1.0;
-}
-
-.dark-mode .input::placeholder {
-color: #d5d5d5;
-}
-
-.dark-mode h1 {
-color: #ffffff;
-}
-
-.dark-mode .tooltip-btn {
-color: rgb(61, 56, 56);
-}
-
-#darkModeToggle {
-position: absolute;
-top: 30px;
-right: 15px;
-font-size: 24px;
-}   .dark-mode {
   background-color: #000000;
   color: #fff;
   cursor: pointer;
