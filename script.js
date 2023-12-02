@@ -5,22 +5,29 @@ const gradientInput = document.getElementById('gradientInput');
 function updateGradientBox() {
   const userInput = gradientInput.value.trim();
 
-  // Check if the entered value is a valid gradient or RGB color
+  // Check if the entered value is a valid gradient or RGB color or hexadecimal color code
   if (isValidGradient(userInput)) {
+    gradientBox.style.background = userInput;
+  } else if (isValidRGB(userInput)) {
     gradientBox.style.background = userInput;
   } else if (isValidHexColor(userInput)) {
     gradientBox.style.background = userInput;
   }
 }
 
-// Update gradient box when user inputs a gradient or RGB color
+// Update gradient box when user inputs a gradient or RGB color or hexadecimal color code
 gradientInput.addEventListener('input', updateGradientBox);
 
 gradientBox.addEventListener('click', (e) => {
   const x = e.offsetX / gradientBox.clientWidth;
   const y = e.offsetY / gradientBox.clientHeight;
   const color = getColorAtPosition(x, y);
-  if (color && !isValidGradient(color) && !isValidHexColor(color)) {
+  if (
+    color &&
+    !isValidGradient(color) &&
+    !isValidRGB(color) &&
+    !isValidHexColor(color)
+  ) {
     gradientInput.value = color;
     gradientBox.style.background = color;
   }
@@ -34,6 +41,11 @@ function getColorAtPosition(x, y) {
 function isValidGradient(value) {
   // Function to check if the entered value is a valid gradient syntax
   return /^linear-gradient\(.+\)$/i.test(value);
+}
+
+function isValidRGB(value) {
+  // Function to check if the entered value is a valid RGB color
+  return /^rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\)$/i.test(value);
 }
 
 function isValidHexColor(value) {
