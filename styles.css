@@ -142,22 +142,31 @@ body {
     width: 100%;
    }
 
+.github-icon {
+  position: absolute;
+  left: 400px;
+  bottom: 275px;
+  font-size: 30px;
+  color: black;
+}
+
 .copy {
   /* button */
-  --button-bg: #353434;
-  --button-hover-bg: #464646;
-  --button-text-color: #CCCCCC;
+  --button-bg: transparent;
+  --button-hover-bg: #bfbcbc;
+  --button-text-color: #000000;
   --button-hover-text-color: #8bb9fe;
-  --button-border-radius: 10px;
+  --button-border-radius: 50px;
   --button-diameter: 36px;
+  transform: scale(1.3);
   --button-outline-width: 1px;
-  --button-outline-color: rgb(141, 141, 141);
+  --button-outline-color: rgb(199, 199, 199);
   /* tooltip */
   --tooltip-bg: #f4f3f3;
   --toolptip-border-radius: 4px;
-  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  --tooltip-font-family: 'Poppins', sans-serif;
   --tooltip-font-size: 12px;
-  --tootip-text-color: rgb(50, 50, 50);
+  --tootip-text-color: rgb(0, 0, 0);
   --tooltip-padding-x: 7px;
   --tooltip-padding-y: 7px;
   --tooltip-offset: 8px;
