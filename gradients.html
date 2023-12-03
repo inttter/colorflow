@@ -1,202 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorlfow</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
-    
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f0f0;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 20px;
-        font-size: 50px;
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Colorlfow</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
+      
+      body {
+        margin: 0;
         font-family: 'Poppins', sans-serif;
-        text-decoration: overline;
-    }
+        background-color: #f0f0f0;
+        animation: fadeIn 1s ease-in-out;
+      }
 
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
+      h1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 20px;
+          font-size: 50px;
+          font-family: 'Poppins', sans-serif;
+          text-decoration: overline;
+      }
 
-    .container {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+      h6 {
+         position: fixed;
+         bottom: 10px;
+         right: 10px;
+         margin: 0;
+        }
 
-    .gradient-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-    }
+      @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
 
-    .gradient-box {
-      width: 300px;
-      height: 200px;
-      border-radius: 20px;
-      box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.7s ease-in-out;
-      position: relative;
-    }
+      .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+      }
 
-    .gradient-box:hover {
-      transform: translateY(-10px);
-    }
+      .gradient-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
 
-    .gradient-code {
-      font-size: 14px;
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 5px;
-      border-radius: 5px;
-    }
+      .gradient-box {
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.7s ease-in-out;
+        position: relative;
+      }
 
-    .hex-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
+      .gradient-box:hover {
+        transform: translateY(-10px);
+      }
 
-    .hex-box {
-      width: 2000px;
-      height: 200px;
-      border-radius: 20px;
-      box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.7s ease-in-out;
-      position: relative;
-    }
+      .gradient-code {
+        font-size: 14px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+      }
 
-    .rgb-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
+      .hex-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
 
-    .rgb-box {
-      width: 2000px;
-      height: 200px;
-      border-radius: 20px;
-      box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.7s ease-in-out;
-      position: relative;
-    }
+      .hex-box {
+        width: 2000px;
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.7s ease-in-out;
+        position: relative;
+      }
 
-  .button {
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  display: inline-block;
-  padding: 15px 32px;
-  font-size: 17px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  background: black;
-  border-radius: 50px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  z-index: 1;
-  overflow: hidden;
-  right: 177px;
-  bottom: 10px;
-}
+      .rgb-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
 
-.button:before {
-  content: "";
+      .rgb-box {
+        width: 2000px;
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.7s ease-in-out;
+        position: relative;
+      }
+
+    .button {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: black;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+    overflow: hidden;
+    right: 177px;
+    bottom: 10px;
+  }
+
+  .button:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0083B0;
+    transition: left 0.8s ease-in-out;
+    z-index: -1;
+  }
+
+  .button:hover:before {
+    left: 0%;
+  }
+
+  .button:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.8s ease-in-out;
+    z-index: -1;
+  }
+
+  .button:hover:after {
+    background-color: transparent;
+  }
+
+  .dark-mode {
+    background-color: #171616;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .dark-mode button {
+  color: fff;
+  }
+
+  .dark-mode .input {
+  color: rgb(61, 56, 56);
+  opacity: 0.8;
+  }
+
+  .dark-mode .input:hover {
+  opacity: 1.0;
+  }
+
+  .dark-mode .input::placeholder {
+  color: #d5d5d5;
+  }
+
+  .dark-mode h1 {
+  color: #ffffff;
+  }
+
+  .dark-mode .tooltip-btn {
+  color: rgb(61, 56, 56);
+  }
+
+  #darkModeToggle {
   position: absolute;
-  top: 0%;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #0083B0;
-  transition: left 0.8s ease-in-out;
-  z-index: -1;
-}
+  top: 30px;
+  right: 15px;
+  font-size: 24px;
+  }
 
-.button:hover:before {
-  left: 0%;
-}
-
-.button:after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: background-color 0.8s ease-in-out;
-  z-index: -1;
-}
-
-.button:hover:after {
-  background-color: transparent;
-}
-  </style>
-</head>
-<body>
-    <h1>Need Colors?</h1>
-  <div class="container">
-    <div class="gradient-row">
-      <div class="gradient-box" style="background: linear-gradient(to bottom right, #ff7e5f, #feb47b);">
-        <div class="gradient-code">linear-gradient(to bottom right, #ff7e5f, #feb47b)</div>
-      </div>
-      <div class="gradient-box" style="background: linear-gradient(to bottom right, #33ccff, #ff99cc);">
-        <div class="gradient-code">linear-gradient(to bottom right, #33ccff, #ff99cc)</div>
-    </div>
-      <div class="gradient-box" style="background: linear-gradient(to bottom right, #5d4954, #cc80a0);">
-        <div class="gradient-code">linear-gradient(to bottom right, #5d4954, #cc80a0)</div>
-    </div>
-    </div>
-    <div class="gradient-row">
-      <div class="gradient-box" style="background: linear-gradient(to bottom left, #ffa5ab, #f8b400);">
-        <div class="gradient-code">linear-gradient(to bottom left, #ffa5ab, #f8b400)</div>
-    </div>
-      <div class="gradient-box" style="background: linear-gradient(to bottom right, #5a3f37, #e0c3fc);">
-        <div class="gradient-code">linear-gradient(to bottom left, #5a3f37, #e0c3fc)</div>
-      </div>
-      <div class="gradient-box" style="background: linear-gradient(to bottom right, #0083B0, #00B4DB);">
-        <div class="gradient-code">linear-gradient(to bottom right, #0083B0, #00B4DB)</div>
-    </div>
-    </div>
-    <div class="hex-row">
-      <div class="hex-box" style="background: #d8e; width: 500px;">
-        <div class="gradient-code">#d8e</div>
-      </div>
-      <div class="hex-box" style="background: #df7; width: 500px;">
-        <div class="gradient-code">#df7</div>
-      </div>
-      <div class="hex-box" style="background: #f77; width: 500px; margin-top: 20px;">
-        <div class="gradient-code">#f77</div>
-    </div>
-      <div class="hex-box" style="background: #33c; width: 500px; margin-top: 20px;">
-        <div class="gradient-code">#33c</div>
-    <div class="rgb-row">
-      <div class="rgb-box" style="background: #0083B0; width: 500px; right: 700px; margin-top: 220px;">
-      <div class="gradient-code">#0083B0</div>
-      </div>
-      <div class="rgb-box" style="background: #f8b400; width: 500px; left: 0px; bottom: 200px;">
-        <div class="gradient-code">#f8b400</div>
+  .dark-mode .gradient-code {
+      color: black;
+    }
+    </style>
+  </head>
+  <body>
+      <h1>Need Colors?</h1>
+      
+    <div class="container">
+      <i id="darkModeToggle" class="fa-solid fa-moon fa-lg"></i>
+      <div class="gradient-row">
+        <div class="gradient-box" style="background: linear-gradient(to bottom right, #ff7e5f, #feb47b);">
+          <div class="gradient-code">linear-gradient(to bottom right, #ff7e5f, #feb47b)</div>
         </div>
+        <div class="gradient-box" style="background: linear-gradient(to bottom right, #33ccff, #ff99cc);">
+          <div class="gradient-code">linear-gradient(to bottom right, #33ccff, #ff99cc)</div>
+      </div>
+        <div class="gradient-box" style="background: linear-gradient(to bottom right, #5d4954, #cc80a0);">
+          <div class="gradient-code">linear-gradient(to bottom right, #5d4954, #cc80a0)</div>
+      </div>
+      </div>
+      <div class="gradient-row">
+        <div class="gradient-box" style="background: linear-gradient(to bottom left, #ffa5ab, #f8b400);">
+          <div class="gradient-code">linear-gradient(to bottom left, #ffa5ab, #f8b400)</div>
+      </div>
+        <div class="gradient-box" style="background: linear-gradient(to bottom right, #5a3f37, #e0c3fc);">
+          <div class="gradient-code">linear-gradient(to bottom left, #5a3f37, #e0c3fc)</div>
         </div>
-        <a href="https://inttter.github.io/colorflow" class="button">
-          ⬅️ back
-        </a>
-</body>
-</html>
+        <div class="gradient-box" style="background: linear-gradient(to bottom right, #0083B0, #00B4DB);">
+          <div class="gradient-code">linear-gradient(to bottom right, #0083B0, #00B4DB)</div>
+      </div>
+      </div>
+      <div class="hex-row">
+        <div class="hex-box" style="background: #d8e; width: 500px;">
+          <div class="gradient-code">#d8e</div>
+        </div>
+        <div class="hex-box" style="background: #df7; width: 500px;">
+          <div class="gradient-code">#df7</div>
+        </div>
+        <div class="hex-box" style="background: #f77; width: 500px; margin-top: 20px;">
+          <div class="gradient-code">#f77</div>
+      </div>
+        <div class="hex-box" style="background: #33c; width: 500px; margin-top: 20px;">
+          <div class="gradient-code">#33c</div>
+      <div class="rgb-row">
+        <div class="rgb-box" style="background: #0083B0; width: 500px; right: 700px; margin-top: 220px;">
+        <div class="gradient-code">#0083B0</div>
+        </div>
+        <div class="rgb-box" style="background: #f8b400; width: 500px; left: 0px; bottom: 200px;">
+          <div class="gradient-code">#f8b400</div>
+          </div>
+          </div>
+          <a href="https://inttter.github.io/colorflow" class="button">
+            ⬅️ back
+          </a>
+  <script>
+      const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  darkModeToggle.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+  });
+
+  function loadDarkModePreference() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+  }
+  </script>
+  <h6>made with ❤️ by Inter</h6>
+  </body>
+  </html>
