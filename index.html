@@ -8,6 +8,20 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <style>
+      .goodGradients {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      animation: fadeIn 3s ease-in-out;
+    }
+  </style>
   <div class="loader-container" id="loader">
     <div class="loader">
     </div>
@@ -19,7 +33,7 @@
       <i id="darkModeToggle" class="fa-solid fa-moon fa-lg"></i>
       <a href="https://github.com/inttter/colorflow" target="_blank" class="github-icon">
         <i class="fa-brands fa-github"></i>
-      </a>
+        </a>
       <button class="copy">
         <span data-text-initial="Copy to clipboard" class="tooltip"></span>
         <span>
@@ -43,6 +57,9 @@
   </div>
 </div>
   <h6>made with ❤️ by Inter</h6>
+  <button onclick="window.location.href='gradients.html'" class="goodGradients">
+    <i class="fa-solid fa-question"></i>
+  </button>
   <script src="script.js"></script>
 </body>
 </html>
