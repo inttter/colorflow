@@ -16,11 +16,11 @@ A simple-to-understand and useful gradient, or color previewer and generator.
 
 There are 3 ways to start using this website:
 
-1. Visit https://inttter.github.io/colorflow
+Visit https://inttter.github.io/colorflow.
 
-2. Clone the repository - `git clone https://github.com/inttter/colorflow.git`
+Clone the repository - `git clone https://github.com/inttter/colorflow.git`.
 
-3. Fork the repository
+Fork the repository.
 
 Upon visiting the website, you are able to input an **<u>rgb value</u> - for example: rgb(10,100,200)**, **<u>hexidecimal value</u> - for example: #d8efea**, or a **gradient - for example: <u>linear-gradient(120deg, #84fab0, #8fd3f4)</u>**
 
