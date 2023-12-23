@@ -10,7 +10,7 @@ A simple-to-understand and useful gradient, or color previewer and generator.
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/inttter/colorflow/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/inttter/colorflow?style=flat-square)](https://github.com/inttter/colorflow/commits/main)
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Finttter.github.io%2Fcolorflow%2F)](https://colorflow.cc)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fcolorflow.cc)](https://colorflow.cc)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/inttter/colorflow)
 [![CodeFactor](https://www.codefactor.io/repository/github/inttter/colorflow/badge/main)](https://www.codefactor.io/repository/github/inttter/colorflow/overview/main)
 
