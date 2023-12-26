@@ -1,6 +1,7 @@
 <div align="center">
 
 ![Colorflow Logo](https://cdn.discordapp.com/attachments/892836872118763543/1181327856589086780/Colorflow-Icon.png?ex=6580a84d&is=656e334d&hm=350167e4495d9e79e69d4efdf414048d33215b7183f899291f05ad392e4f014a&)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Finttter%2FColorflow.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Finttter%2FColorflow?ref=badge_shield)
 
 # Colorflow 🎨
 
@@ -53,6 +54,9 @@ Feel free to fork the repository and make a pull request or issue!
 Colorflow is licensed under the MIT License.
 
 Please see [the MIT License](LICENSE) for more information on use.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Finttter%2FColorflow.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Finttter%2FColorflow?ref=badge_large)
 
 # Buy Me A Coffee! ☕
 
